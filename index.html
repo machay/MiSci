@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiSci</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/user.css">
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <img src="assets/img/tile.gif" class="sidebar">
+    <div class="login-card">
+        <form class="form-signin"><span class="reauth-email"> </span>
+            <div class="register-switch">
+                <input type="radio" name="sex" value="F" id="sex_f" class="register-switch-input" checked>
+                <label for="sex_f" class="register-switch-label">Administrator</label>
+                <input type="radio" name="sex" value="M" id="sex_m" class="register-switch-input">
+                <label for="sex_m" class="register-switch-label">Member</label>
+            </div>
+            <input class="form-control" type="text" placeholder="First Name" required>
+            <input class="form-control" type="text" placeholder="Last Name" required>
+            <input class="form-control" type="email" placeholder="Email address" autofocus="" id="inputEmail" required>
+            <input class="form-control" type="password" placeholder="Password" id="inputPassword" required>
+            <div class="checkbox"></div>
+            <button class="btn btn-primary btn-block btn-lg btn-signin" onclick=window.parent.location.href='events.html' type="submit">Create Account</button>
+            <a href="login.html">Already have an account?</a>
+        </form>
+    </div>
+</body>
+
+</html>

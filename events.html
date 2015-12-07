@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiSci</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Amatic+SC:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="assets/css/user.css">
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <script src="assets/js/jquery.min.js"></script>
+    <link href="assets/css/rotating-card.css" rel="stylesheet" />
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <img src="assets/img/tile.gif" class="sidebar">
+    <a href="events.html" class="greeting-title-2"> Register for an Event</a>
+    <a href="my_events.html" class="greeting-title"> Manage My Events</a>
+    <a href="account.html" class="greeting-title-3"> Manage My Account</a>
+    <h1>Events</h1>
+    <div class="col-sm-10 col-sm-offset-1">
+        <div class="col-md-4 col-sm-6">
+             <div class="card-container manual-flip">
+                <div class="card">
+                    <div class="front">
+                        <div class="cover">
+                            <img src="http://r.ddmcdn.com/w_640/h_360/gif/videos/dnews-black-space-hero.jpg">
+                        </div>
+                        <div class="content">
+                            <div class="main">
+                                <h3 class="name"></h3>
+                                <p class="profession">Challenger Adventure</p>
+                                <h5><i class="fa fa-money"></i> $5.00</h5>
+                                <h5><i class="fa fa-calendar-o"></i> Sunday, December 7, 2015</h5>
+                                <h5><i class="fa fa-clock-o"></i> 2:00 - 3:00 p.m.</h5>
+                            </div>
+                            <div class="footer">
+                                <button class="btn btn-simple" onclick="rotateCard(this)">
+                                    <i class="fa fa-mail-forward"></i> See Details
+                                </button>
+                            </div>
+                        </div>
+                    </div> <!-- end front panel -->
+                    <div class="back">
+                        <div class="header">
+                            <h5 class="motto">Challenger Adventure</h5>
+                        </div> 
+                        <div class="content">
+                            <div class="main">
+                                <h4 class="text-center">Description</h4>
+                                <p>Join other museum visitors in this out-of-this-world experience! See what it's like to do experiments in space and take home a souvenir from your experience. Please note that space is limited.</p>
+                        </div>
+                        <div class="footer">
+                            <button class="btn btn-simple" rel="tooltip" title="Flip Card" onclick="rotateCard(this)">
+                                <i class="fa fa-reply"></i> Back
+                            </button>
+                            <div class="social-links text-center">
+                                <a href="my_events.html" class="facebook"><i class="fa fa-plus"></i> Register</a>
+                            </div>
+                        </div>
+                    </div> <!-- end back panel -->
+                </div> <!-- end card -->
+            </div> <!-- end card-container -->
+        </div> <!-- end col sm 3 -->
+    </body>
+        <script type="text/javascript">
+            $().ready(function(){
+                $('[rel="tooltip"]').tooltip();
+                
+            });
+            
+            function rotateCard(btn){
+                var $card = $(btn).closest('.card-container');
+                console.log($card);
+                if($card.hasClass('hover')){
+                    $card.removeClass('hover');
+                } else {
+                    $card.addClass('hover');
+                }
+            }
+        </script>
+</html>
